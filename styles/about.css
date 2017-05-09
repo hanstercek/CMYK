@@ -1,0 +1,85 @@
+html {
+    font-size: 10px;
+}
+
+#title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3em;
+    padding: .25em 1em;
+}
+
+#content {
+    padding-bottom: 5em; /*matches heigh of navbar*/
+}
+
+#text {
+    text-align: left;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: color .5s;
+}
+
+a:hover {
+    color: white;
+    transition: color 2s ease-in;
+}
+
+#navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5em;
+    background-color: white;
+}
+
+#logo {
+    font-family: 'Crimson Text', serif;
+    display: inline-block;
+    padding-left: 2%;
+    font-size: 4em;
+    margin-top: -.25em;
+}
+
+#link {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    padding-left: 10%;
+}
+
+h4 {
+    padding: 0;
+    margin: 0;
+}
+
+#email-input {
+    width: 60%;
+    min-width: 18em;
+    margin: 0 auto;
+    padding: 2em 0;
+}
+
+input[type="email"] {
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    text-align: center;
+    background: none;
+    font-size: 1em;
+    outline: 0;
+    border: 0;
+}
+
+input[type="email"]:focus {
+    border: 0;
+    outline: 0;
+}

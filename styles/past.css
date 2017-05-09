@@ -1,0 +1,146 @@
+/* Main Page */
+html {
+    font-size: 10px;
+}
+
+#title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3em;
+    padding: .25em 1em;
+}
+
+#content {
+    text-align: center;
+    margin-bottom: 4em;
+}
+
+.sublink img {
+    width: 80%;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5em;
+    padding-bottom: 1em;
+}
+
+.sublink:hover > h2 {
+    text-decoration: underline;
+}
+
+/* Navbar */
+a {
+    text-decoration: none;
+    color: black;
+    transition: color .5s;
+}
+
+a:hover {
+    color: white;
+    transition: color 2s ease-in;
+}
+
+#navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5em;
+    background-color: white;
+}
+
+#logo {
+    font-family: 'Crimson Text', serif;
+    display: inline-block;
+    padding-left: 2%;
+    font-size: 4em;
+    margin-top: -.25em;
+}
+
+#link {
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2em;
+    padding-left: 10%;
+}
+
+/* Overlay */
+#overlay {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 100;
+    top: 0;
+    left: 0;
+}
+
+#overlay-close {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 101;
+}
+
+#close-button {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    position: fixed;
+    top: 5vh;
+    left: 2em;
+    z-index: 102;
+}
+
+#close-button a {
+    color: white;
+}
+
+#overlay-content {
+    position: fixed;
+    height: 80vh;
+    width: 100vw;
+    text-align: center;
+    margin: 10vh auto;
+    z-index: 103;
+}
+
+#overlay img {
+    height: inherit;
+    width: auto;
+}
+
+#page-nav {
+    z-index: 102;
+    position: fixed;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3vh;
+    width: 100%;
+    text-align: center;
+    color: white;
+    top: 5%;
+}
+
+#page-left, #page-right {
+    padding: 0 3em;
+    display: inline-block;
+}
+
+#page-nav a {
+    color: white;
+}
+
+/* Media Queries */
+@media (min-width: 400px) {
+    #overlay-page1 {
+        display: none;
+    }
+}
+
+@media (min-width: 750px) {
+    #overlay-page1 {
+        display: inline-block;
+    }
+}

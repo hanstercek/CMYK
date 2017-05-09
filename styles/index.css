@@ -1,0 +1,274 @@
+body {
+    background-color: white;
+    font-size: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: black;
+}
+
+/* Navbar */
+#navbar {
+    background-color: white;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    max-width: 20em;
+    z-index: 1;
+}
+
+h1, h2 {
+    padding: 0;
+    margin: 0;
+}
+
+#logo {
+    font-family: 'Crimson Text', serif;
+    padding-left: 1em;
+    margin: 0;
+    font-size: 5vw;
+}
+
+#links {
+    padding-top: 0em;
+    margin-left: -2em;
+    list-style-type: none;
+    font-family: 'Open Sans', sans-serif;
+    display: inline-block;
+    width: 100%;
+}
+
+.navlink {
+    font-size: 5vw;
+    padding: 1em 0;
+}
+
+.sublink {
+    font-size: 3vw;
+    padding: .5em 0em;
+    margin: 0 1.25em;
+    list-style-type: disc;
+}
+
+/* Content (mobile) */
+#content {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    width: 70%;
+    overflow-x: scroll;
+}
+
+.page {
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+    padding-top: 1em;
+}
+
+/* Overlay */
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: black;
+}
+#overlay-content {
+    position: fixed;
+    z-index: 15;
+}
+#overlay-page {
+    width: 100%;
+    height: auto;
+}
+#overlay h3 {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 1.5em;
+}
+#page-count {
+    text-align: right;
+    padding-right: 2%;
+}
+#overlay-nav {
+    width: 100%;
+}
+#overlay-nav a {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    font-size: 5em;
+}
+#overlay-left {
+    position: absolute;
+    display: inline-block;
+    left: 2%;
+    text-align: left;
+    padding-right: 2em;
+    /*background-color: red;*/
+}
+#overlay-right {
+    position: absolute;
+    display: inline-block;
+    right: 2%;
+    text-align: right;
+    padding-left: 2em;
+}
+#overlay-close {
+    position: fixed;
+    z-index: 15;
+    left: 2%;
+    bottom: 2%;
+}
+#overlay-field {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 11;
+    background-color: black;
+}
+
+/* Hide first and last pages on mobile */
+#page0, #page15 {
+    display: none;
+}
+.button-nav, .case-left, .case-right {
+    display: none;
+}
+
+/* Desktop Query */
+@media (min-width: 750px) {
+    #navbar {
+        width: 20em;
+    }
+    #logo {
+        font-size: 3.75em;
+    }
+    .navlink {
+        font-size: 3.75em;
+    }
+    .sublink {
+        font-size: 2.25em;
+    }
+    #content {
+        width: 100%;
+        overflow: auto;
+        margin-left: 20em; /* width navbar */
+    }
+    .page-section {
+        display: table;
+        height: 100vh;
+        width: auto;
+        text-align: center;
+        padding-left: 20em;
+        margin: 0 auto;
+    }
+    .page-container {
+        display: table-cell;
+        width: inherit;
+        height: auto;
+        vertical-align: middle;
+        margin-top: 2vh;
+    }
+    .page-container-helper {
+        display: inline-block;
+    }
+    .page-nav-container {
+        position: relative;
+    }
+    .page {
+        max-height: 90vh;
+        width: auto;
+        max-width: 49%;
+    }
+    .case-left, .case-right {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4em;
+        height: 8em;
+        background-color: rgba(0,0,0,.75);
+    }
+    .case-left {
+        border-radius: 0 1em 1em 0;
+    }
+    .case-right {
+        border-radius: 1em 0 0 1em;
+    }
+    .case-left {
+        left: .8em;
+    }
+    .case-right {
+        right: .8em;
+    }
+    .left, .right {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-family: 'Open Sans', sans-serif;
+        color: white;
+        font-size: 5em;
+    }
+    .left {
+        padding-left: .1em;
+    }
+    .right {
+        right: 0;
+        padding-right: .1em;
+    }
+    #page0, #page15 {
+        display: inline-block;
+    }
+    .button-nav {
+        display: block;
+    }
+    .dot, .dot-current {
+        display: inline-block;
+        height: .75em;
+        width: .75em;
+        margin: 1.5% .5em;
+        background-color: #bbb;
+        border-radius: 50%;
+        transition: background-color 0.6s ease;
+    }
+    .dot:hover, .dot-current {
+        background-color: black;
+    }
+    #overlay-content {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    #overlay-page {
+        width: auto;
+        height: 100%;
+    }
+    #page-count {
+        position: fixed;
+        text-align: left;
+        left: 2%;
+        top: 2%;
+        padding: 0;
+    }
+    #overlay-nav {
+        position: fixed;
+        top: 45%;
+        z-index: 12;
+    }
+}
